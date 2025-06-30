@@ -1,0 +1,560 @@
+@charset "utf-8";
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+.inner {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#wrap {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* 여기까지 리셋 */
+
+/* 여기부터 헤더&메뉴 */
+header {
+    width: 100%;
+    height: 91px;
+    background-color: gray;
+    position: relative;
+}
+
+header img {
+    margin-left: 150px;
+    padding-top: 10px;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    left: 350px;
+    bottom: 25px;
+    /* overflow: hidden; */
+    
+}
+
+.menu ul li {
+    /* padding: 5px; */
+    /* background-color: #555; */
+    margin: 10px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.menu a:hover {
+    background-color: #555;
+}
+
+.menu a {
+    padding: 10px;
+}
+
+.mobile-menu{
+    display: none;
+}
+.ad-moba{
+    display: none;
+}
+
+/* 여기서 햄버거 */
+
+.ham-btn {
+    border: 1px solid violet;
+    width: 40px;
+    height: 30px;
+    position: relative;
+}
+
+.ham-btn span {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+
+.ham-btn span:nth-child(1) {
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ham-btn span:nth-child(2) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ham-btn span:nth-child(3) {
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.ham-btn.on span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-btn.on span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-btn.on span:nth-child(3) {
+    bottom: 50%;
+    transform: translate(-50%, 50%) rotate(-45deg);
+}
+.ham-btn{display: none;}
+
+/* 여기까지 햄버거 */
+.titlemenu {
+    position: relative;
+}
+
+.titlemenu .sub {
+    position: absolute;
+    top: 30px;
+    left: -50px;
+    display: none;
+
+}
+
+.sub {
+    background-color: rgb(168, 164, 164);
+    z-index: 100;
+    
+}
+
+.titlemenu>li:hover .sub {
+    display: block;
+    
+}
+.mobile-menu{
+    display: none;
+}
+
+/* 여기까지 헤더&메뉴 */
+
+/* 여기서1번 섹션 */
+
+.logo {
+    background-color: rgb(174, 219, 236);
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 360px;
+    border-radius: 25px;
+}
+
+.logo img {
+    margin-left: 800px;
+    margin-top: 25px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.logo h2 {
+    position: absolute;
+    top: 100px;
+    left: 570px;
+}
+
+.logo h3 {
+    position: absolute;
+    top: 150px;
+    left: 500px;
+}
+
+.logo span {
+    background-color: rgb(185, 205, 212);
+    border-radius: 25px;
+    width: 150px;
+    height: 45px;
+    text-align: center;
+    padding-top: 10px;
+    position: absolute;
+    left: 560px;
+    top: 220px;
+}
+
+/* 여기부터 로고목업 모달창 */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 100000;
+    backdrop-filter: blur(5px);
+    overflow-y: scroll;
+}
+
+.modal-cont {
+    background-color: #fff;
+    padding: 20px;
+    width: 1280px;
+    margin: auto;
+    height: 970px;
+    position: relative;
+}
+
+.size01 {
+    height: 795px;
+}
+
+.size02 {
+    height: 795px;
+}
+
+.size03 {
+    height: 895px;
+}
+
+/* 라따뚜이포스터 */
+.size04 {
+    height: auto;
+}
+
+/* 라따뚜이 */
+
+/* 아이스크림포스터 */
+.size05 {
+    height: auto;
+}
+
+.size05 img {
+    width: 1920px;
+    height: 1080px;
+}
+
+/* 아이스크림 */
+
+/* 아이소메트리 */
+.size06 {
+    height: auto;
+}
+.size07 {
+    height: auto;
+}
+
+/* 아이소 */
+
+.size08{
+    height: auto;
+}
+.size08 video{
+    width: 1240px;
+    height: auto;
+}
+.size09{
+    height: auto;
+}
+.size09 video{
+    width: 1240px;
+    height: auto;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.modal-cont h3 {
+    text-align: center;
+}
+
+.modal-cont img {
+    width: calc(100% - 20px);
+    min-height: 200px;
+    margin-left: 10px;
+}
+
+.modal-cont p {
+    text-align: center;
+}
+
+/* 여기까지 로고목업 모달창 */
+
+/* 여기까지 1번섹션 */
+
+/* 여기부터 2번섹션 */
+
+.mocup {
+    width: 100%;
+    padding: 60px 20px;
+    background-color: pink;
+    box-sizing: border-box;
+}
+
+.mocup h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.mocup h3 {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.mocup ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 0;
+    list-style: none;
+}
+
+.mocup li {
+    width: 45%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    
+}
+
+.mocup img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* 여기까지 2번섹션 */
+
+
+/* 여기부터 3번섹션 */
+
+
+.photo-section {
+    width: 100%;
+    height: 830px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: rgb(194, 186, 186);
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.work-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    margin-top: 150px;
+}
+
+.work {
+    width: 100%;
+    /* 기본적으로 100%로 설정 */
+    max-width: 32%;
+    /* 최대 너비 제한 (3개 나열) */
+    flex-grow: 1;
+    text-align: center;
+}
+
+.work img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 200px;
+}
+/* 여기부터 일러스트 */
+
+
+.photo-section h2 {
+    text-align: center;
+}
+
+.photo-section p {
+    text-align: center;
+}
+
+span {
+    display: inline-block;
+}
+
+span p {
+    padding-top: 15px;
+}
+
+.photo-section span {
+    text-align: center;
+    margin-left: 750px;
+    width: 350px;
+    height: 57px;
+    background-color: aquamarine;
+    border-radius: 45px;
+    position: absolute;
+    top: 140px;
+}
+
+/* 여기까지 3번 섹션 */
+
+/* 여기부터 일러스트 섹션 */
+.illust {
+    /* padding: 50px 0;  */
+    background-color: #fef4f4;
+}
+.illust p{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.illust h2 {
+    font-size: 28px;
+    text-align: center;
+    /* margin-bottom: 15px; */
+    font-weight: bold;
+    color: #333;
+}
+
+
+.illust-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 15px;
+    background-color: #fef4f4;
+    width: 100%;
+  }
+  
+  .illust-list li {
+    width: 45%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    height: 480px;
+    /* transition: transform 0.3s ease; */
+  }
+  
+  .illust-item {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+  }
+  
+  .illust-item.on {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .illust-list img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+/* 여기부터 포토샵 워크 */
+.work {
+    flex: 1 1 30%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 0 16px 16px;
+    /* ← 위쪽 패딩 제거 */
+    text-align: center;
+    /* transform: translateY(100px);
+    transition: all 0.3s 0.6s; */
+}
+
+.work img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.work p {
+    margin-top: 12px;
+    font-size: 16px;
+    color: #555;
+}
+
+.work {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+  }
+  
+  .work.on {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* 여기까지 포토샵 워크 */
+
+/* 여기까지 4번 섹션 */
+
+/* 여기부터 푸터 */
+
+.foot {
+    width: 100%;
+    height: 535px;
+    background-color: #555;
+}
+
+.footer-img {
+    background-color: #fef4f4;
+    border-radius: 15px;
+    width: 730px;
+    height: 280px;
+    padding: 5px;
+    padding-top: 15px;
+    margin-left: 570px;
+    position: relative;
+    top: 25px;
+}
+
+.footer-img ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-img ul p {
+    text-align: center;
+}
+
+.footer-img img {
+    border-radius: 15px;
+}
+
+.footp {
+    margin-left: 570px;
+    color: #fff;
+    margin-top: 35px;
+}
